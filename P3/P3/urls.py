@@ -9,7 +9,6 @@ apppattern = [
     path('appdj/',include('app1.urls')),
     path('apppy/',views.Learnpy),
 
-
 ]
 
 urlpatterns = [
