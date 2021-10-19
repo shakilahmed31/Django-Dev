@@ -8,13 +8,21 @@
 </head>
 <body>
 
-<style> background : green ; 
-        font : Arial;
-</style>
+          <style> body{
+              background-color:blue ;
+                        
+          }
+
+          </style>
 
 
 
-<h1> Course : {{ sub }} , Total Time : {{ time }} , Total Amount : {{ amount }}</h1>
+<h1> Course : {{ sub|upper }} , Total Time : {{ time|length }} , Total Amount : {{ amount }} ,{{dt}}</h1></br>
+<h2>Here we check DTL Filters : {{ sub | upper}} making variable upper</h2></br>
+<h2> double filters : {{sub| upper | truncatechars:3}} </H2></br>
+<h2> slice  filters : {{sub| slice:2}} </H2>
+<h3>This is testing of DTL |lower </h3></br>
+<h3>Todays date and time : {{ dt }} </h3>
   
 </body>
 </html>

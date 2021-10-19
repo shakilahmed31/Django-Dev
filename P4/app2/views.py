@@ -1,10 +1,10 @@
 from django.shortcuts import render
-
-# Create your views here.
+from datetime import datetime
 
 def learnpy(request):
   course   = 'Python'
   duration = '4 Month'
   cost     = '8000 tk'
-  course = {'sub':course, 'time':duration, 'amount':cost}
+  d        = datetime.now()
+  course = {'sub':course, 'time':duration, 'amount':cost,'dt':d }
   return render(request,'app2/app2.html',course)
