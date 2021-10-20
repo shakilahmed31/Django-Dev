@@ -5,5 +5,5 @@ from .views import course_view
 
 urlpatterns = [
     
-    path('cv', course_view),
+    path('cv', course_view,name='cinfo'),
 ]

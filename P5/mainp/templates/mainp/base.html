@@ -13,12 +13,14 @@
 <body> 
       
        <nav>
-       <ul><h3>
-       <li>Home</li>
-       <li>About</li>
-       <li>Django Course</li>
-       </h3>
-       </ul>
+          <ul><h3>
+                  <li><a href=" /">Home</a></li>
+                 
+                  <li><a href="{% url 'aboutus' %} ">About</a></li>
+                  
+                  <li><a href="{% url 'cinfo' %}">Django Course</a></li>
+                </h3>
+          </ul>
        </nav>
        <h1>
        {% block content %}

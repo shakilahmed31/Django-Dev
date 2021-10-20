@@ -3,8 +3,9 @@
 
 {% block title %} Home {% endblock title %}
 
-<h1>
-       {% block content %}
-       This is Home 
-       {% endblock  %} 
-</h1>
+       
+              {% block content %}
+              This is My {{ d }} HomePage 
+              {% include 'mainp/topc.html' with P="CSS"  %}
+              {% endblock  %} 
+       
