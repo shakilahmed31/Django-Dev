@@ -1,0 +1,14 @@
+
+
+
+{% extends 'mainp/base.html' %}
+
+{% block title %}{{ block.super }} Course {% endblock title %}
+
+<h1>
+       {% block content %}
+       {{ block.super }}
+       </br>
+         Here all Django course releted information available 
+       {% endblock  %} 
+</h1>

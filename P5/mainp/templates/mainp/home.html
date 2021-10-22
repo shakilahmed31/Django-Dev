@@ -1,0 +1,11 @@
+
+{% extends 'mainp/base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+       
+              {% block content %}
+              This is My {{ d }} HomePage 
+              {% include 'mainp/topc.html' with P="CSS"  %}
+              {% endblock  %} 
+       

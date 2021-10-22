@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        tr , th ,td {
+          border: 1px solid black;
+          
+          <!--text-align: center;-->
+                      }
+
+        </style>
+</head>
+
+<body>
+<h4>This is Homepage</h4>
+        
+      <h3>  
+      <table>
+        <tr>        
+          <th>ID</th>
+          <th>STU ID</th>
+          <th>STU Name</th>
+          <th>STU Email</th>
+          <th>STU Pass</th>
+        </tr> 
+      
+      </h3> 
+      {% for s in stu %}  
+          <tr>
+          <td>{{s.id}}</td>
+          <td>{{s.stuid}}</td>
+          <td>{{s.stuname}}</td>
+          <td>{{s.stuemail}}</td>
+          <td>{{s.stupass}}</td>
+          </tr>                  
+      {% endfor %}
+      </table>
+             
+</body>
+</html>
