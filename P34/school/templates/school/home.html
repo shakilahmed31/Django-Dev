@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+</head>
+<body>
+<style>
+table,td,tr{
+  border:1px solid black;
+}
+</style>
+</head>
+<h2>ExamCenter Information</h2>
+<body>
+<table>
+<td>ID</td>
+<td>Center Name</td>
+<td>City</td>
+
+  {% for st in dexa %}
+  <tr>
+  <td>{{st.id}}</td>
+  <td>{{st.cname}}</td>
+  <td>{{st.city}}</td>
+    </tr>
+  {% endfor %}
+  </table>
+  <h2>MyExamCenter Information</h2>
+<body>
+<table>
+<td>ID</td>
+<td>Center Name</td>
+<td>City</td>
+
+  {% for ex in dmexa %}
+  <tr>
+  <td>{{ex.id}}</td>
+  <td>{{ex.cname}}</td>
+  <td>{{ex.city}}</td>
+  
+  </tr>
+  {% endfor %}
+  </table>
+  
+</body>
+</html>
