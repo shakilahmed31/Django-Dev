@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+
+<h2>Student Information</h2>
+  <style>
+    table,td,tr{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+    <table>
+      <td>ID</td>
+      <td>NAME</td>
+      <td>AGE</td>
+      <td>FEES</td>
+    {% for sd in sdisp  %}
+      <tr>
+        <td>{{sd.id}}</td>
+        <td>{{sd.name}}</td>
+        <td>{{sd.age}}</td>
+        <td>{{sd.fees}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+<h2>Teacher Information</h2>
+  <table>
+    <td>ID</td>
+    <td>NAME</td>
+    <td>AGE</td>
+    <td>DATE</td>
+    <td>SALARY</td>
+  {% for td in tdisp  %}
+    <tr>
+      <td>{{td.id}}</td>
+      <td>{{td.name}}</td>
+      <td>{{td.age}}</td>
+      <td>{{td.date}}</td>
+      <td>{{td.salary}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+<h2>Contractor Information</h2>
+  <table>
+    <td>ID</td>
+    <td>NAME</td>
+    <td>AGE</td>
+    <td>DATE</td>
+    <td>PAYMENT</td>
+  {% for cd in cdisp  %}
+    <tr>
+      <td>{{cd.id}}</td>
+      <td>{{cd.name}}</td>
+      <td>{{cd.age}}</td>
+      <td>{{cd.date}}</td>
+      <td>{{cd.payment}}</td>
+      </tr>
+  {% endfor %}
+  </table>
+</body>
+</html>

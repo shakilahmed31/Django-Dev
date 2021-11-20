@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  
+  table,th,tr,td{
+
+    border:1px solid black
+
+
+  }
+  
+  </style>
+</head>
+<body>
+
+<h3> Students Information Table</h3>
+<table>
+
+<th>ID</th>
+<th>Name</th>
+<th>Roll</th>
+<th>City</th>
+<th>Marks</th>
+<th>Pass Date</th>
+<th>Admission Date</th>
+
+  
+  {% for f in student %}<tr>
+        <td>{{f.id}}</td>
+        <td>{{f.name}}</td>
+        <td>{{f.roll}}</td>
+        <td>{{f.city}}</td>
+        <td>{{f.marks}}</td>
+        <td>{{f.passdate}}</td>
+        <td>{{f.admdate}}</td></tr>
+  {% endfor %}
+
+ </table> 
+ <h2>Average : {{Total_Avg}}</h2><br>
+ <h2>Summetion: {{Summation}}</h2><br>
+ <h2>Maximum : {{Maximum}}</h2><br>
+ <h2>Minimum : {{Minimum}}</h2><br>
+ <h2>All count : {{counter}}</h2>
+</body>
+</html>
