@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table,
+  td,
+  tr {
+    border: 1px solid black;
+  }
+</style>
+
+<body>
+  <h4>Student Information</h4>
+  <table>
+
+    <td>ID</td>
+    <td>Name</td>
+    <td>Roll</td>
+    <td>Email</td>
+    <td>Password</td>
+    <td>Action</td>
+
+    {% for st in form %}<tr>
+      <td>{{st.id}}</td>
+      <td>{{st.name}}</td>
+      <td>{{st.roll}}</td>
+      <td>{{st.email}}</td>
+      <td>{{st.password}}</td>
+      <td> <a href="{% url 'del' st.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="{% url 'create' %}">Go for Creation</a>
+  
+</body>
+<h4>You try to delete : {{id}}</h4>
+</html>
