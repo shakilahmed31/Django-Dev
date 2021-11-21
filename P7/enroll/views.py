@@ -4,5 +4,5 @@ from .forms import StudentRegistration
 
 
 def Student_view(request):
-  fm=StudentRegistration()
+  fm=StudentRegistration(auto_id=True)
   return render(request,'enroll/student.html',{'form':fm})

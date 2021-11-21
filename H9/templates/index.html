@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Home Page</h2>
+  <H3>{{name}} is from   {{place}} </H3>
+  <h3>Welcome to Text Analyser</h3>
+  <form action="/analyze" method="get">
+<textarea name='text' style="margin: 0px; width: 875px; height: 189px;">Text Area</textarea>
+<br>
+<input type="checkbox" name="rpunc">Remove Punctuations <br>
+<input type="checkbox" name="fullcaps">UPPERCASE <br>
+<input type="checkbox" name="nliner">New Line Remover <br>
+<button type="submit"> Analyze Text</button>
+
+  </form>
+</body>
+</html>

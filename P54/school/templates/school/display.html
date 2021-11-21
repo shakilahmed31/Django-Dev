@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+table ,td,tr  {
+border: 1px solid blue;
+padding: 3px;
+font-family:Verdana;
+
+}
+.font{
+  font-family:Cambria;
+}
+ .tbl {
+background-color: black;
+color:aliceblue;
+
+}
+h3{
+  color:blue;
+  font-family: sans-serif;
+  font-size:25px;
+
+}
+</style>
+<body>
+  <h3>Student Display</h3>
+
+  <table>
+    <td class='tbl'>ID</td>
+    <td class='tbl'>Name</td>
+    <td class='tbl'>Email</td>
+    <td class='tbl'>Password</td>
+    <td class='tbl'>Action</td>
+    {% for f in fm%}
+    <tr>
+        <td class= 'font'>{{f.id}}</td>
+        <td class='font'>{{f.name}}</td>
+        <td class='font'>{{f.email}}</td>
+        <td class='font'>{{f.password}}</td>
+        <td class='font'><a href="{% url 'stuupdate' f.id %}">Edit</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br><br>
+  <td class='tbl'><a href="{% url 'cr'%}">Add Student</a></td>
+  
+    
+</body>
+</html>
